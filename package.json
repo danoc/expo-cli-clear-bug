@@ -1,18 +1,22 @@
 {
-  "name": "expo-clear-bug",
+  "name": "expo-cli-clear-bug",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "test:repro": "./test-repro.sh",
+    "apply-fix": "patch-package",
+    "unapply-fix": "patch-package --reverse"
   },
   "dependencies": {
     "expo": "~54.0.30",
-    "expo-status-bar": "~3.0.9",
     "react": "19.1.0",
-    "react-native": "0.81.5"
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-web": "^0.21.0"
+  },
+  "devDependencies": {
+    "@expo/cli": "^54.0.20",
+    "patch-package": "^8.0.0"
   },
   "private": true
 }
